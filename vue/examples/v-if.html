@@ -1,0 +1,205 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style type="text/css">
+li{
+	list-style-type: none;
+	float: left;
+	margin: 20px;
+}
+.list li img{
+	height: 300px;
+}
+.list .title{
+	text-align: center;
+	padding: 10px;
+	font-size: 22px;
+	font-weight: bold;
+}
+.block{
+	margin-bottom: 300px;
+}
+.block h1{
+	text-align: center;
+}
+.code{
+	font-size: 20px;
+}
+.real-code{
+	overflow:hidden;
+}
+</style>
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" href="http://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.12.0/build/styles/default.min.css" />
+<script src="http://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.12.0/build/highlight.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+	<!-- if 演示 -->
+	<div class="block" id="app-1">
+		<div class="real-code">
+		  <h1>if：</h1>
+		  <ul class="list">
+			<li>
+				<img :src="closedImg" />
+				<div class="title">神秘之门</div>
+			</li>
+			<li v-if="open">
+				<img :src="openedImg" />
+				<div class="title">"神秘之门"打开</div>
+			</li>
+		  </ul>
+		</div>
+<pre class="code">
+	<code class="html">
+		  &lt;ul class=&quot;list&quot;&gt;
+			&lt;li&gt;
+				&lt;img :src=&quot;closedImg&quot; /&gt;
+				&lt;div class=&quot;title&quot;&gt;神秘之门&lt;/div&gt;
+			&lt;/li&gt;
+			&lt;li v-if=&quot;open&quot;&gt;
+				&lt;img :src=&quot;openedImg&quot; /&gt;
+				&lt;div class=&quot;title&quot;&gt;&quot;神秘之门&quot;打开&lt;/div&gt;
+			&lt;/li&gt;
+		  &lt;/ul&gt;
+	</code>
+</pre>
+<pre class="code">
+	<code class="js">
+	var app1 = new Vue({
+	  el: '#app-1',
+	  data: {
+		closedImg: 'http://mvimg2.meitudata.com/53e73f781d4685886.jpg',
+		openedImg: 'http://www.5djiaren.com/uploads/2015-08/05-100339_505.jpg',
+		open: false
+	  }
+	})
+	</code>
+</pre>
+	</div>
+
+	<script>
+		var app1 = new Vue({
+		  el: '#app-1',
+		  data: {
+			closedImg: 'http://mvimg2.meitudata.com/53e73f781d4685886.jpg',
+			openedImg: 'http://www.5djiaren.com/uploads/2015-08/05-100339_505.jpg',
+			open: false
+		  }
+		})
+
+	</script>
+
+
+
+
+
+
+<!-- else块 演示 -->
+	<div class="block" id="app-2">
+		<div class="real-code">
+		  <h1>else 块：</h1>
+		  <ul class="list">
+			<li v-if="keep">
+				<img :src="keepImg1" />
+				<div class="title">用了“刘氏面膜”</div>
+				<div class="desc">姓名：苏有朋 出生：1973</div>
+			</li>
+			<li v-else>
+				<img :src="noKeepImg" />
+				<div class="title">未用“刘氏面膜”</div>
+				<div class="desc">姓名：郭德刚 出生：1973</div>
+			</li>
+		  </ul>
+		</div>
+<pre class="code">
+	<code class="html">
+		&lt;ul class=&quot;list&quot;&gt;
+			&lt;li&gt;
+				&lt;img :src=&quot;keepImg1&quot; /&gt;
+				&lt;div class=&quot;title&quot;&gt;用了“刘氏面膜”&lt;/div&gt;
+				&lt;div class=&quot;desc&quot;&gt;姓名：苏有朋 出生：1973&lt;/div&gt;
+			&lt;/li&gt;
+			&lt;li v-if=&quot;!keep&quot; &gt;
+				&lt;img :src=&quot;noKeepImg&quot; /&gt;
+				&lt;div class=&quot;title&quot;&gt;未用“刘氏面膜”&lt;/div&gt;
+				&lt;div class=&quot;desc&quot;&gt;姓名：郭德刚 出生：1973&lt;/div&gt;
+			&lt;/li&gt;
+		  &lt;/ul&gt;
+	</code>
+</pre>
+<pre class="code">
+	<code class="js">
+	var app2 = new Vue({
+	  el: '#app-2',
+	  data: {
+		keepImg1: 'http://img.show160.com/newtrade/upfile/20123/20123634668339544930000.jpg',
+		noKeepImg: 'http://www.zjjzx.cn/upload/news/201112/20111201105336660242.jpg',
+		keep: true
+	  }
+	})
+	</code>
+</pre>
+	</div>
+
+	<script>
+	var app2 = new Vue({
+	  el: '#app-2',
+	  data: {
+		keepImg1: 'http://img.show160.com/newtrade/upfile/20123/20123634668339544930000.jpg',
+		noKeepImg: 'http://www.zjjzx.cn/upload/news/201112/20111201105336660242.jpg',
+		keep: true
+	  }
+	})
+
+	</script>
+
+
+
+
+
+
+
+
+
+
+
+
+	<div class="block" id="app-3">
+	  <h3>else 块：</h3>
+	  <ul class="list">
+		<li>
+			<img :src="keepImg1" />
+			<div class="title">用了“刘氏面膜”</div>
+			<div class="desc">姓名：苏有朋 出生：1973</div>
+		</li>
+		<li v-if="!keep" >
+			<img :src="noKeepImg" />
+			<div class="title">未用“刘氏面膜”</div>
+			<div class="desc">姓名：郭德刚 出生：1973</div>
+		</li>
+	  </ul>
+	</div>
+
+	
+
+	<script>
+	var app3 = new Vue({
+	  el: '#app-3',
+	  data: {
+		keepImg1: 'http://img.show160.com/newtrade/upfile/20123/20123634668339544930000.jpg',
+		noKeepImg: 'http://www.zjjzx.cn/upload/news/201112/20111201105336660242.jpg',
+		keep: false
+	  }
+	})
+
+	</script>
+
+
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>

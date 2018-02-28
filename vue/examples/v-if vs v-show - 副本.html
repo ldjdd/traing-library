@@ -29,23 +29,24 @@ li{
 	overflow:hidden;
 }
 </style>
+<link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
 <link rel="stylesheet" href="http://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.12.0/build/styles/default.min.css" />
 <script src="http://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.12.0/build/highlight.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 <body>
-	<!-- if ÑİÊ¾ -->
+	<!-- if æ¼”ç¤º -->
 	<div class="block" id="app-1">
 		<div class="real-code">
-		  <h1>if£º</h1>
+		  <h1>ifï¼š</h1>
 		  <ul class="list">
 			<li>
 				<img :src="closedImg" />
-				<div class="title">ÉñÃØÖ®ÃÅ</div>
+				<div class="title">ç¥ç§˜ä¹‹é—¨</div>
 			</li>
 			<li v-if="open">
 				<img :src="openedImg" />
-				<div class="title">"ÉñÃØÖ®ÃÅ"´ò¿ª</div>
+				<div class="title">"ç¥ç§˜ä¹‹é—¨"æ‰“å¼€</div>
 			</li>
 		  </ul>
 		</div>
@@ -54,11 +55,11 @@ li{
 		  &lt;ul class=&quot;list&quot;&gt;
 			&lt;li&gt;
 				&lt;img :src=&quot;closedImg&quot; /&gt;
-				&lt;div class=&quot;title&quot;&gt;ÉñÃØÖ®ÃÅ&lt;/div&gt;
+				&lt;div class=&quot;title&quot;&gt;ç¥ç§˜ä¹‹é—¨&lt;/div&gt;
 			&lt;/li&gt;
 			&lt;li v-if=&quot;open&quot;&gt;
 				&lt;img :src=&quot;openedImg&quot; /&gt;
-				&lt;div class=&quot;title&quot;&gt;&quot;ÉñÃØÖ®ÃÅ&quot;´ò¿ª&lt;/div&gt;
+				&lt;div class=&quot;title&quot;&gt;&quot;ç¥ç§˜ä¹‹é—¨&quot;æ‰“å¼€&lt;/div&gt;
 			&lt;/li&gt;
 		  &lt;/ul&gt;
 	</code>
@@ -94,20 +95,20 @@ li{
 
 
 
-<!-- else¿é ÑİÊ¾ -->
+<!-- elseå— æ¼”ç¤º -->
 	<div class="block" id="app-2">
 		<div class="real-code">
-		  <h1>else ¿é£º</h1>
+		  <h1>else å—ï¼š</h1>
 		  <ul class="list">
-			<li>
+			<li v-if="keep">
 				<img :src="keepImg1" />
-				<div class="title">ÓÃÁË¡°ÁõÊÏÃæÄ¤¡±</div>
-				<div class="desc">ĞÕÃû£ºËÕÓĞÅó ³öÉú£º1973</div>
+				<div class="title">ç”¨äº†â€œåˆ˜æ°é¢è†œâ€</div>
+				<div class="desc">å§“åï¼šè‹æœ‰æœ‹ å‡ºç”Ÿï¼š1973</div>
 			</li>
-			<li v-if="!keep" >
+			<li v-else>
 				<img :src="noKeepImg" />
-				<div class="title">Î´ÓÃ¡°ÁõÊÏÃæÄ¤¡±</div>
-				<div class="desc">ĞÕÃû£º¹ùµÂ¸Õ ³öÉú£º1973</div>
+				<div class="title">æœªç”¨â€œåˆ˜æ°é¢è†œâ€</div>
+				<div class="desc">å§“åï¼šéƒ­å¾·åˆš å‡ºç”Ÿï¼š1973</div>
 			</li>
 		  </ul>
 		</div>
@@ -116,13 +117,13 @@ li{
 		&lt;ul class=&quot;list&quot;&gt;
 			&lt;li&gt;
 				&lt;img :src=&quot;keepImg1&quot; /&gt;
-				&lt;div class=&quot;title&quot;&gt;ÓÃÁË¡°ÁõÊÏÃæÄ¤¡±&lt;/div&gt;
-				&lt;div class=&quot;desc&quot;&gt;ĞÕÃû£ºËÕÓĞÅó ³öÉú£º1973&lt;/div&gt;
+				&lt;div class=&quot;title&quot;&gt;ç”¨äº†â€œåˆ˜æ°é¢è†œâ€&lt;/div&gt;
+				&lt;div class=&quot;desc&quot;&gt;å§“åï¼šè‹æœ‰æœ‹ å‡ºç”Ÿï¼š1973&lt;/div&gt;
 			&lt;/li&gt;
 			&lt;li v-if=&quot;!keep&quot; &gt;
 				&lt;img :src=&quot;noKeepImg&quot; /&gt;
-				&lt;div class=&quot;title&quot;&gt;Î´ÓÃ¡°ÁõÊÏÃæÄ¤¡±&lt;/div&gt;
-				&lt;div class=&quot;desc&quot;&gt;ĞÕÃû£º¹ùµÂ¸Õ ³öÉú£º1973&lt;/div&gt;
+				&lt;div class=&quot;title&quot;&gt;æœªç”¨â€œåˆ˜æ°é¢è†œâ€&lt;/div&gt;
+				&lt;div class=&quot;desc&quot;&gt;å§“åï¼šéƒ­å¾·åˆš å‡ºç”Ÿï¼š1973&lt;/div&gt;
 			&lt;/li&gt;
 		  &lt;/ul&gt;
 	</code>
@@ -134,7 +135,7 @@ li{
 	  data: {
 		keepImg1: 'http://img.show160.com/newtrade/upfile/20123/20123634668339544930000.jpg',
 		noKeepImg: 'http://www.zjjzx.cn/upload/news/201112/20111201105336660242.jpg',
-		keep: false
+		keep: true
 	  }
 	})
 	</code>
@@ -164,18 +165,18 @@ li{
 
 
 
-	<div class="block" id="app-2">
-	  <h3>else ¿é£º</h3>
+	<div class="block" id="app-3">
+	  <h3>else å—ï¼š</h3>
 	  <ul class="list">
 		<li>
 			<img :src="keepImg1" />
-			<div class="title">ÓÃÁË¡°ÁõÊÏÃæÄ¤¡±</div>
-			<div class="desc">ĞÕÃû£ºËÕÓĞÅó ³öÉú£º1973</div>
+			<div class="title">ç”¨äº†â€œåˆ˜æ°é¢è†œâ€</div>
+			<div class="desc">å§“åï¼šè‹æœ‰æœ‹ å‡ºç”Ÿï¼š1973</div>
 		</li>
 		<li v-if="!keep" >
 			<img :src="noKeepImg" />
-			<div class="title">Î´ÓÃ¡°ÁõÊÏÃæÄ¤¡±</div>
-			<div class="desc">ĞÕÃû£º¹ùµÂ¸Õ ³öÉú£º1973</div>
+			<div class="title">æœªç”¨â€œåˆ˜æ°é¢è†œâ€</div>
+			<div class="desc">å§“åï¼šéƒ­å¾·åˆš å‡ºç”Ÿï¼š1973</div>
 		</li>
 	  </ul>
 	</div>
@@ -183,8 +184,8 @@ li{
 	
 
 	<script>
-	var app2 = new Vue({
-	  el: '#app-2',
+	var app3 = new Vue({
+	  el: '#app-3',
 	  data: {
 		keepImg1: 'http://img.show160.com/newtrade/upfile/20123/20123634668339544930000.jpg',
 		noKeepImg: 'http://www.zjjzx.cn/upload/news/201112/20111201105336660242.jpg',
@@ -197,25 +198,25 @@ li{
 
 	
 
-	<div class="block" id="app-2">
-	  <h3>forÑ­»·Ë÷Òı  --> ËÄ´óÃÀÅ®ÅÅĞĞ£º</h3>
+	<div class="block" id="app-3">
+	  <h3>forå¾ªç¯ç´¢å¼•  --> å››å¤§ç¾å¥³æ’è¡Œï¼š</h3>
 	  <ul>
 		<li v-for="(girl, index) in girls">
 			<img :title="girl.name" :src="girl.img"  />
-			<div>µÚ{{ index }}Ãû</div>
+			<div>ç¬¬{{ index }}å</div>
 		</li>
 	  </ul>
 	</div>
 
 	<script>
-	var app2 = new Vue({
-	  el: '#app-2',
+	var app3 = new Vue({
+	  el: '#app-3',
 	  data: {
 		girls: [
-		  { name: 'Î÷Ê©', img: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1516630469496&di=e1f583797733e6a78eb096b7b9a1d1e1&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201608%2F10%2F20160810111934_VCA8F.jpeg' },
-		  { name: 'ÍõÕÑ¾ü', img: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1516630732598&di=d48d045e28895cb2939d5b849c550a73&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201608%2F11%2F20160811160709_QyHNT.jpeg' },
-		  { name: 'õõ²õ', img: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1516630984430&di=822d6fe682b4562ce6a790afb3d23cc7&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fforum%2Fpic%2Fitem%2Fc6a909385343fbf26afde0f4b07eca8067388f0d.jpg' },
-		  { name: 'Ñî¹óåú', img: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1516631151497&di=849565276bcae26c41cef13c614276fb&imgtype=0&src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20160524%2F081106f8700144de9542a68a61014dc8_th.jpg' }
+		  { name: 'è¥¿æ–½', img: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1516630469496&di=e1f583797733e6a78eb096b7b9a1d1e1&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201608%2F10%2F20160810111934_VCA8F.jpeg' },
+		  { name: 'ç‹æ˜­å†›', img: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1516630732598&di=d48d045e28895cb2939d5b849c550a73&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201608%2F11%2F20160811160709_QyHNT.jpeg' },
+		  { name: 'è²‚è‰', img: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1516630984430&di=822d6fe682b4562ce6a790afb3d23cc7&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fforum%2Fpic%2Fitem%2Fc6a909385343fbf26afde0f4b07eca8067388f0d.jpg' },
+		  { name: 'æ¨è´µå¦ƒ', img: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1516631151497&di=849565276bcae26c41cef13c614276fb&imgtype=0&src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20160524%2F081106f8700144de9542a68a61014dc8_th.jpg' }
 		]
 	  }
 	})
@@ -224,38 +225,39 @@ li{
 
 	<div class="page"></div>
 
-	<h3>for + if ËÄ´óÃÀÅ®ÅÅĞĞ£º</h3>
-	<div class="block" id="app-3">
-	  <ul>
-		<li v-for="(girl, index) in girls">
-			<v-if>
-			<img v-if="index == 3" :title="girl.name" :src="girl.wedding" />
-			<img v-else :title="girl.name" :src="girl.img" />
-			<div>µÚ{{ index }}Ãû</div>
-		</li>
-	  </ul>
+	<h3>for + if å››å¤§ç¾å¥³æ’è¡Œï¼š</h3>
+	<div class="block" id="app-4">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-6" v-for="(girl, index) in girls">
+							<img v-if="index == 3" :title="girl.name" :src="girl.wedding" style="width: 100%;" />
+							<img v-else :title="girl.name" :src="girl.img" style="width: 100%;" />
+							<div>ç¬¬{{ index }}å</div>
+					</div>
+				</div>
+			</div>
 	</div>
 
 
 	<script>
-	var app3 = new Vue({
-	  el: '#app-3',
+	var app4 = new Vue({
+	  el: '#app-4',
 	  data: {
 		girls: [
 		  { 
-		  name: 'Î÷Ê©', 
+		  name: 'è¥¿æ–½', 
 		  img: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1516630469496&di=e1f583797733e6a78eb096b7b9a1d1e1&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201608%2F10%2F20160810111934_VCA8F.jpeg'
 		  },
 		  { 
-		  name: 'ÍõÕÑ¾ü', 
+		  name: 'ç‹æ˜­å†›', 
 		  img: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1516630732598&di=d48d045e28895cb2939d5b849c550a73&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201608%2F11%2F20160811160709_QyHNT.jpeg' 
 		  },
 		  { 
-		  name: 'õõ²õ', 
+		  name: 'è²‚è‰', 
 		  img: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1516630984430&di=822d6fe682b4562ce6a790afb3d23cc7&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fforum%2Fpic%2Fitem%2Fc6a909385343fbf26afde0f4b07eca8067388f0d.jpg' 
 		  },
 		  { 
-			  name: 'Ñî¹óåú', 
+			  name: 'æ¨è´µå¦ƒ', 
 			  img: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1516631151497&di=849565276bcae26c41cef13c614276fb&imgtype=0&src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20160524%2F081106f8700144de9542a68a61014dc8_th.jpg', 
 			  wedding: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1516631955539&di=766108378a623c9a1436f2c007f7fed4&imgtype=0&src=http%3A%2F%2Fpic.baike.soso.com%2Fp%2F20131220%2F20131220035314-1954129079.jpg'
 		  }
@@ -266,6 +268,9 @@ li{
 	</script>
 
 <script>hljs.initHighlightingOnLoad();</script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 
 </html>
