@@ -38,17 +38,17 @@ li{
 	<!-- if 演示 -->
 	<div class="block" id="app-1">
 		<div class="real-code">
-		  <h1>if：</h1>
-		  <ul class="list">
-			<li>
+			<h1>if：</h1>
+			<div class="row">
+			<div class="col-md-6">
 				<img :src="closedImg" />
 				<div class="title">神秘之门</div>
-			</li>
-			<li v-if="open">
+			</div>
+			<div v-if="open" class="col-md-6">
 				<img :src="openedImg" />
 				<div class="title">"神秘之门"打开</div>
-			</li>
-		  </ul>
+			</div>
+			</div>
 		</div>
 <pre class="code">
 	<code class="html">
@@ -166,35 +166,44 @@ li{
 
 
 	<div class="block" id="app-3">
-	  <h3>else 块：</h3>
-	  <ul class="list">
-		<li>
-			<img :src="keepImg1" />
-			<div class="title">用了“刘氏面膜”</div>
-			<div class="desc">姓名：苏有朋 出生：1973</div>
-		</li>
-		<li v-if="!keep" >
-			<img :src="noKeepImg" />
-			<div class="title">未用“刘氏面膜”</div>
-			<div class="desc">姓名：郭德刚 出生：1973</div>
-		</li>
-	  </ul>
-	</div>
+		<div class="real-code">
+		  <h3>v-if VS v-show：</h3>
+		  <div v-show="menuVisible" style="position:absolute; left:0px; width:30px; height:100px; background:#000; color:#fff;">左侧菜单</div>
+		  <div v-if="sex='male'" style="margin-left:200px; width:150px; height:100px; line-height:100px; background:#000; color:#fff; text-align:center">男</div>
+		</div>
 
+<pre class="code">
+	<code class="html">
+	&lt;div v-show=&quot;menuVisible&quot; style=&quot;position:absolute; left:0px; width:30px; height:100px; background:#000; color:#fff;&quot;&gt;左侧菜单&lt;/div&gt;
+	&lt;div v-if=&quot;sex=&#x27;male&#x27;&quot; style=&quot;margin-left:200px; width:150px; height:100px; line-height:100px; background:#000; color:#fff; text-align:center&quot;&gt;男&lt;/div&gt;
+	</code>
+</pre>
 	
-
-	<script>
+<pre class="code">
+	<code class="js">
 	var app3 = new Vue({
 	  el: '#app-3',
 	  data: {
 		keepImg1: 'http://img.show160.com/newtrade/upfile/20123/20123634668339544930000.jpg',
 		noKeepImg: 'http://www.zjjzx.cn/upload/news/201112/20111201105336660242.jpg',
-		keep: false
+		menuVisible: false,
+		sex: 'male'
+	  }
+	})
+	</code>
+</pre>
+</div>
+
+<script>
+	var app3 = new Vue({
+	  el: '#app-3',
+	  data: {
+		menuVisible: false,
+		sex: 'male'
 	  }
 	})
 
 	</script>
-
 
 <script>hljs.initHighlightingOnLoad();</script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
