@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+</head>
+<body>
+<div id="app">
+    <!-- 使用双大括号形式：-->
+    <div>{{ message }}</div>
+    <!-- 使用v-html指令形式：-->
+    <div v-html="message"></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: '<h1>Hello Vue!</h1>'
+        }
+    })
+</script>
+</body>
+</html>
