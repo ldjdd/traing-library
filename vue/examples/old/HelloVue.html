@@ -6,12 +6,11 @@
   <title>Hello Vue!</title>
 </head>
 <body>
+	<div id="app">
+	{{ message }}
+	</div>
 
-<div id="app">
-{{ message }}
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 
 <script>
 	var app = new Vue({
@@ -21,6 +20,7 @@
 		}
 	})
 </script>
+
 
 </body>
 </html>
