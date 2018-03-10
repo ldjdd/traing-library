@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Vue!</title>
+</head>
+<body>
+
+  <div id="app">
+    名称：{{ name }}
+    年龄：{{ age + 1 }}
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+
+<script>
+
+  var app = new Vue({
+    el: '#app',
+    data: {
+      name: '小三',
+      age: 18
+    }
+  })
+
+</script>
+
+</body>
+</html>

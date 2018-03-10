@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Vue!</title>
+</head>
+<body>
+
+  <div id="app">
+    <h1>老婆的钱：{{ wife }}</h1>
+    <h1>我的钱：{{ self }}</h1>
+    <h1>我家总共有：{{ wife + self }}</h1>
+    <h1>老丈人：小刘，现在家里有多少积蓄了？</h1>
+    <h1>我家总共有：{{ wife + self }}</h1>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+
+<script>
+
+  var app = new Vue({
+    el: '#app',
+    data: {
+      self: 100,
+      wife: 1000000
+    },
+    computed: {
+      
+    }
+  })
+
+</script>
+
+</body>
+</html>
