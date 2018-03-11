@@ -885,10 +885,190 @@
           "metaData" : ""
         }
       ]
+    },
+    {
+      "id" : 24,
+      "src" : "D:\\用户目录\\我的文档\\Camtasia Studio\\Rec 03-11-18.trec",
+      "rect" : [0, 0, 1360, 768],
+      "lastMod" : "20180311T074136",
+      "sourceTracks" : [
+        {
+          "range" : [0, 26143],
+          "type" : 0,
+          "editRate" : 30,
+          "trackRect" : [0, 0, 1360, 768],
+          "sampleRate" : 28,
+          "bitDepth" : 0,
+          "numChannels" : 0,
+          "metaData" : "Rec 03-11-18.trec;"
+        },
+        {
+          "range" : [0, 38434816],
+          "type" : 2,
+          "editRate" : 44100,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 44100,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "metaData" : ""
+        },
+        {
+          "range" : [0, 38434816],
+          "type" : 2,
+          "editRate" : 44100,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 44100,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "metaData" : ""
+        }
+      ]
+    },
+    {
+      "id" : 25,
+      "src" : "D:\\用户目录\\我的文档\\Camtasia Studio\\Rec 03-11-18 1.trec",
+      "rect" : [0, 0, 1360, 768],
+      "lastMod" : "20180311T074402",
+      "sourceTracks" : [
+        {
+          "range" : [0, 155],
+          "type" : 0,
+          "editRate" : 30,
+          "trackRect" : [0, 0, 1360, 768],
+          "sampleRate" : 28,
+          "bitDepth" : 0,
+          "numChannels" : 0,
+          "metaData" : "Rec 03-11-18 1.trec;"
+        },
+        {
+          "range" : [0, 222208],
+          "type" : 2,
+          "editRate" : 44100,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 44100,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "metaData" : ""
+        },
+        {
+          "range" : [0, 228352],
+          "type" : 2,
+          "editRate" : 44100,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 44100,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "metaData" : ""
+        }
+      ]
+    },
+    {
+      "id" : 26,
+      "src" : "D:\\用户目录\\我的文档\\Camtasia Studio\\Rec 03-11-18 2.trec",
+      "rect" : [0, 0, 1360, 768],
+      "lastMod" : "20180311T075239",
+      "sourceTracks" : [
+        {
+          "range" : [0, 13126],
+          "type" : 0,
+          "editRate" : 30,
+          "trackRect" : [0, 0, 1360, 768],
+          "sampleRate" : 28,
+          "bitDepth" : 0,
+          "numChannels" : 0,
+          "metaData" : "Rec 03-11-18 2.trec;"
+        },
+        {
+          "range" : [0, 19295232],
+          "type" : 2,
+          "editRate" : 44100,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 44100,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "metaData" : ""
+        },
+        {
+          "range" : [0, 19293184],
+          "type" : 2,
+          "editRate" : 44100,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 44100,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "metaData" : ""
+        }
+      ]
+    },
+    {
+      "id" : 27,
+      "src" : "D:\\用户目录\\我的文档\\Camtasia Studio\\Rec 03-11-18 3.trec",
+      "rect" : [0, 0, 1360, 768],
+      "lastMod" : "20180311T081132",
+      "sourceTracks" : [
+        {
+          "range" : [0, 14356],
+          "type" : 0,
+          "editRate" : 30,
+          "trackRect" : [0, 0, 1360, 768],
+          "sampleRate" : 28,
+          "bitDepth" : 0,
+          "numChannels" : 0,
+          "metaData" : "Rec 03-11-18 3.trec;"
+        },
+        {
+          "range" : [0, 21103616],
+          "type" : 2,
+          "editRate" : 44100,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 44100,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "metaData" : ""
+        },
+        {
+          "range" : [0, 21104640],
+          "type" : 2,
+          "editRate" : 44100,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 44100,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "metaData" : ""
+        }
+      ]
+    },
+    {
+      "id" : 28,
+      "src" : "D:\\用户目录\\我的文档\\Camtasia Studio\\Rec 03-11-18 4.trec",
+      "rect" : [0, 0, 1360, 768],
+      "lastMod" : "20180311T083821",
+      "sourceTracks" : [
+        {
+          "range" : [0, 4478],
+          "type" : 0,
+          "editRate" : 30,
+          "trackRect" : [0, 0, 1360, 768],
+          "sampleRate" : 29,
+          "bitDepth" : 0,
+          "numChannels" : 0,
+          "metaData" : "Rec 03-11-18 4.trec;"
+        },
+        {
+          "range" : [0, 6572032],
+          "type" : 2,
+          "editRate" : 44100,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 44100,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "metaData" : ""
+        }
+      ]
     }
   ],
   "timeline" : {
-    "id" : 24,
+    "id" : 29,
     "sceneTrack" : {
       "scenes" : [
         {
@@ -901,11 +1081,11 @@
                 "trackIndex" : 0,
                 "medias" : [
                   {
-                    "id" : 25,
+                    "id" : 30,
                     "_type" : "UnifiedMedia",
                     "video" : 
                         {
-                          "id" : 26,
+                          "id" : 31,
                           "_type" : "ScreenVMFile",
                           "src" : 1,
                           "trackNumber" : 0,
@@ -983,7 +1163,7 @@
                         },
                     "audio" : 
                         {
-                          "id" : 27,
+                          "id" : 32,
                           "_type" : "AMFile",
                           "src" : 1,
                           "trackNumber" : 2,
@@ -1025,7 +1205,7 @@
                 "trackIndex" : 1,
                 "medias" : [
                   {
-                    "id" : 28,
+                    "id" : 33,
                     "_type" : "AMFile",
                     "src" : 1,
                     "trackNumber" : 1,
@@ -1110,7 +1290,7 @@
     "backgroundColor" : [ 0, 0, 0, 255]
   },
   "metadata" : {
-    "AutoSaveFile" : "C:\\Users\\Administrator\\AppData\\Local\\TechSmith\\Camtasia Studio\\9.0\\Auto-Saves\\vue55b2ee8.autosave.tscproj",
+    "AutoSaveFile" : "C:\\Users\\Administrator\\AppData\\Local\\TechSmith\\Camtasia Studio\\9.0\\Auto-Saves\\vue9dbe04.autosave.tscproj",
     "CanvasZoom" : 47,
     "Date" : "2018-03-06 10:22:58 下午",
     "IsAutoSave" : "0",
