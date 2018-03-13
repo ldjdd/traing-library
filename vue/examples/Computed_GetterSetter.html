@@ -8,9 +8,10 @@
 <body>
 
   <div id="app">
-     <h1>wife: {{ wife }}</h1>
-     <h1>self: {{ self }}</h1>
-     <h1>family: {{ family }}</h1>
+     <h1>你媳妇的存款: {{ wife }}</h1>
+     <h1>你的存款: {{ self }}</h1>
+     <h1>你家里的存款（表达式）: {{ wife + self }}</h1>
+     <h1>你家里的存款（计算属性）: {{ family }}</h1>
   </div>
 
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
