@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Vue!</title>
+</head>
+<body>
+
+  <div id="app">
+     <h1>wife: {{ wife }}</h1>
+     <h1>self: {{ self }}</h1>
+     <h1>family: {{ family }}</h1>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+
+<script>
+
+  var app = new Vue({
+    el: '#app',
+    data: {
+      wife: 80000, // 每次发了工资你都把钱给了你媳妇
+      self: 10
+    },
+    computed: {
+      family: {
+        get: function () {
+          return this.wife + this.self;
+        },
+        set: function (value) {
+          this.wife = value[0];
+          this.self = value[1];
+        }
+      }
+    }
+  })
+
+</script>
+
+</body>
+</html>

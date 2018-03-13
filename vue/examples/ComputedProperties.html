@@ -8,18 +8,21 @@
 <body>
 
   <div id="app">
+    <!--
     <h1>老婆的钱：{{ wife }}</h1>
     <h1>我的钱：{{ self }}</h1>
     <h1>我家总共有：{{ wife + self }}</h1>
     <h1>老丈人：小刘，现在家里有多少积蓄了？</h1>
     <h1>我家总共有：{{ wife + self }}</h1>
-    
+     -->
+     <h1>{{ money }}</h1>
+     <h1>{{ responsiveMoney }}</h1>
   </div>
 
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
 
 <script>
-
+  var a = 100;
   var app = new Vue({
     el: '#app',
     data: {
@@ -27,7 +30,17 @@
       wife: 1000000
     },
     computed: {
-      
+      money: {
+        get: function () {
+          return a;
+        },
+        set: function (value) {
+          a = value;
+        }
+      },
+      responsiveMoney: function () {
+        return this.self + this.wife;
+      }
     }
   })
 
