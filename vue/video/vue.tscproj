@@ -1149,14 +1149,126 @@
           "metaData" : ""
         }
       ]
+    },
+    {
+      "id" : 32,
+      "src" : "D:\\用户目录\\我的文档\\Camtasia Studio\\Rec 03-14-18.trec",
+      "rect" : [0, 0, 1364, 768],
+      "lastMod" : "20180314T144520",
+      "sourceTracks" : [
+        {
+          "range" : [0, 6814],
+          "type" : 0,
+          "editRate" : 30,
+          "trackRect" : [0, 0, 1364, 768],
+          "sampleRate" : 28,
+          "bitDepth" : 0,
+          "numChannels" : 0,
+          "metaData" : "Rec 03-14-18.trec;"
+        },
+        {
+          "range" : [0, 10012672],
+          "type" : 2,
+          "editRate" : 44100,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 44100,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "metaData" : ""
+        }
+      ]
+    },
+    {
+      "id" : 33,
+      "src" : "D:\\用户目录\\我的文档\\Camtasia Studio\\Rec 03-14-18 1.trec",
+      "rect" : [0, 0, 1364, 768],
+      "lastMod" : "20180314T145634",
+      "sourceTracks" : [
+        {
+          "range" : [0, 9071],
+          "type" : 0,
+          "editRate" : 30,
+          "trackRect" : [0, 0, 1364, 768],
+          "sampleRate" : 28,
+          "bitDepth" : 0,
+          "numChannels" : 0,
+          "metaData" : "Rec 03-14-18 1.trec;"
+        },
+        {
+          "range" : [0, 13320192],
+          "type" : 2,
+          "editRate" : 44100,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 44100,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "metaData" : ""
+        }
+      ]
+    },
+    {
+      "id" : 34,
+      "src" : "D:\\用户目录\\我的文档\\Camtasia Studio\\Rec 03-14-18 2.trec",
+      "rect" : [0, 0, 1364, 768],
+      "lastMod" : "20180314T150742",
+      "sourceTracks" : [
+        {
+          "range" : [0, 6184],
+          "type" : 0,
+          "editRate" : 30,
+          "trackRect" : [0, 0, 1364, 768],
+          "sampleRate" : 28,
+          "bitDepth" : 0,
+          "numChannels" : 0,
+          "metaData" : "Rec 03-14-18 2.trec;"
+        },
+        {
+          "range" : [0, 9085952],
+          "type" : 2,
+          "editRate" : 44100,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 44100,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "metaData" : ""
+        }
+      ]
+    },
+    {
+      "id" : 35,
+      "src" : "D:\\用户目录\\我的文档\\Camtasia Studio\\Rec 03-14-18 3.trec",
+      "rect" : [0, 0, 1364, 768],
+      "lastMod" : "20180314T152524",
+      "sourceTracks" : [
+        {
+          "range" : [0, 16031],
+          "type" : 0,
+          "editRate" : 30,
+          "trackRect" : [0, 0, 1364, 768],
+          "sampleRate" : 28,
+          "bitDepth" : 0,
+          "numChannels" : 0,
+          "metaData" : "Rec 03-14-18 3.trec;"
+        },
+        {
+          "range" : [0, 23550976],
+          "type" : 2,
+          "editRate" : 44100,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 44100,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "metaData" : ""
+        }
+      ]
     }
   ],
   "timeline" : {
-    "id" : 32,
+    "id" : 36,
     "sceneTrack" : {
       "scenes" : [
         {
-          "duration" : 437.533333333333,
+          "duration" : 245.033333333333,
           "title" : "",
           "type" : "",
           "csml" : {
@@ -1165,16 +1277,16 @@
                 "trackIndex" : 0,
                 "medias" : [
                   {
-                    "id" : 33,
+                    "id" : 37,
                     "_type" : "UnifiedMedia",
                     "video" : 
                         {
-                          "id" : 34,
+                          "id" : 38,
                           "_type" : "ScreenVMFile",
-                          "src" : 26,
+                          "src" : 31,
                           "trackNumber" : 0,
                           "attributes" : {
-                            "ident" : "Rec 03-11-18 2"
+                            "ident" : "Rec 03-13-18 2"
                           },
                           "parameters" : {
                             "scale0" : {
@@ -1247,9 +1359,9 @@
 
                           ],
                           "start" : 0,
-                          "duration" : 13124,
+                          "duration" : 7351,
                           "mediaStart" : 0,
-                          "mediaDuration" : 13124,
+                          "mediaDuration" : 7351,
                           "scalar" : 1,
                           "animationTracks" : {
 
@@ -1257,10 +1369,10 @@
                         },
                     "audio" : 
                         {
-                          "id" : 35,
+                          "id" : 39,
                           "_type" : "AMFile",
-                          "src" : 26,
-                          "trackNumber" : 2,
+                          "src" : 31,
+                          "trackNumber" : 1,
                           "attributes" : {
                             "ident" : "",
                             "sampleRate" : 44100,
@@ -1273,9 +1385,9 @@
 
                           ],
                           "start" : 0,
-                          "duration" : 13124,
+                          "duration" : 7351,
                           "mediaStart" : 0,
-                          "mediaDuration" : 13124,
+                          "mediaDuration" : 7351,
                           "scalar" : 1,
                           "animationTracks" : {
 
@@ -1283,9 +1395,9 @@
                         }
 ,
                     "start" : 0,
-                    "duration" : 13124,
+                    "duration" : 7351,
                     "mediaStart" : 0,
-                    "mediaDuration" : 13124,
+                    "mediaDuration" : 7351,
                     "scalar" : 1,
                     "metadata" : {
                       "AutoAppliedSmartFocus" : "False",
@@ -1298,40 +1410,6 @@
               {
                 "trackIndex" : 1,
                 "medias" : [
-                  {
-                    "id" : 36,
-                    "_type" : "AMFile",
-                    "src" : 26,
-                    "trackNumber" : 1,
-                    "attributes" : {
-                      "ident" : "Rec 03-11-18 2",
-                      "sampleRate" : 44100,
-                      "bitDepth" : 16,
-                      "gain" : 1.0,
-                      "mixToMono" : false
-                    },
-                      "channelNumber" : "0,1",
-                    "effects" : [
-
-                    ],
-                    "start" : 0,
-                    "duration" : 13126,
-                    "mediaStart" : 0,
-                    "mediaDuration" : 13126,
-                    "scalar" : 1,
-                    "metadata" : {
-                      "WinSubProjectDisplayName" : "",
-                      "clipSpeedAttribute" : false
-                    },
-                    "animationTracks" : {
-
-                    }
-                  }
-                ]
-              },
-              {
-                "trackIndex" : 2,
-                "medias" : [
                 ]
               }
             ]
@@ -1340,15 +1418,6 @@
       ]
     },
     "trackAttributes" : [
-      {
-        "ident" : "",
-        "audioMuted" : false,
-        "videoHidden" : false,
-        "metadata" : {
-          "IsLocked" : "False",
-          "WinTrackHeight" : "56"
-        }
-      },
       {
         "ident" : "",
         "audioMuted" : false,
@@ -1384,7 +1453,7 @@
     "backgroundColor" : [ 0, 0, 0, 255]
   },
   "metadata" : {
-    "AutoSaveFile" : "C:\\Users\\Administrator\\AppData\\Local\\TechSmith\\Camtasia Studio\\9.0\\Auto-Saves\\vueaa1adf2.autosave.tscproj",
+    "AutoSaveFile" : "",
     "CanvasZoom" : 48,
     "Date" : "2018-03-06 10:22:58 下午",
     "IsAutoSave" : "0",
