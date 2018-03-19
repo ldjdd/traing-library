@@ -17,10 +17,10 @@
 
 <script>
 
-  var app = new Vue({
+  var vm = new Vue({
     el: '#app',
     data: {
-      wife: 80000, // 每次发了工资你都把钱给了你媳妇
+      wife: 100000, // 每次发了工资你都把钱给了你媳妇
       self: 100
     },
     computed: {
@@ -28,6 +28,7 @@
         get: function () {
           return this.wife + this.self;
         },
+        // [100, 100000]
         set: function (value) {
           this.wife = value[0];
           this.self = value[1];
