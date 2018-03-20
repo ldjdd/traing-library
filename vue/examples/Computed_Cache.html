@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Vue!</title>
+</head>
+<body>
+
+  <div id="app">
+     <h1>你媳妇的存款: {{ wife }}</h1>
+     <h1>你的存款: {{ self }}</h1>
+     <h1>你家里的存款（计算属性）: {{ family }}</h1>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+
+<script>
+
+  var vm = new Vue({
+    el: '#app',
+    data: {
+      wife: 100000, // 每次发了工资你都把钱给了你媳妇
+      self: 100
+    },
+    computed: {
+      family: {
+        get: function () {
+          console.log('getter');
+          return this.wife + this.self;
+        },
+        // [100, 100000]
+        set: function (value) {
+          console.log('setter');
+          this.wife = value[0];
+          this.self = value[1];
+        }
+      }
+    }
+  })
+
+</script>
+
+</body>
+</html>
