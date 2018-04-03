@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Vue!</title>
+</head>
+<body>
+
+<div id="app">
+  
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+
+<script>
+  console.clear();
+
+	var app = new Vue({
+		el: '#app',
+    data: {
+      wife: 1000,
+      self: 100
+    },
+    methods: {
+      family: function () {
+        return this.wife + this.self
+      },
+      title: function (money) {
+        if(money > 500000) {
+          return '中产阶级'
+        } else if (money > 50000) {
+          return '小康生活'
+        } else if (money > 10000) {
+          return '温饱家庭'
+        } else {
+          return '贫困户'
+        }
+      }
+    }
+	})
+</script>
+
+</body>
+</html>

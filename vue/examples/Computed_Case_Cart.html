@@ -24,14 +24,12 @@
       ]
     },
     computed: {
-      total: {
-        get: function () {
-          let totalAmount = 0.0;
-          for(let i=0; i<this.goods.length; i++) {
-            totalAmount += this.goods[i]['num'] * this.goods[i]['price'];
-          }
-          return totalAmount;
+      total: function () {
+        let totalAmount = 0.0;
+        for(let i=0; i<this.goods.length; i++) {
+          totalAmount += this.goods[i]['num'] * this.goods[i]['price'];
         }
+        return totalAmount;
       }
     }
   })

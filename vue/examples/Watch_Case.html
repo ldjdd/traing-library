@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Watch</title>
+</head>
+<body>
+
+<div id="app">
+  <h1>商品名称：{{ title }} 
+    <span style="color: #f00;">{{ supported }}</span>
+  </h1>
+  <h1>地区: {{ city }}</h1>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+
+<script>
+  console.clear();
+
+	var vm = new Vue({
+		el: '#app',
+    data: {
+      title: 'SUEKISS 实体娃娃 标准款',
+      city: '北京',
+      supported: '有货'
+    },
+    watch: {
+      city: function (newValue, oldValue) {
+        if(newValue === '钓鱼岛') {
+          this.supported = '无货'
+        } else {
+          this.supported = '有货'
+        }
+      }
+    }
+	})
+</script>
+
+</body>
+</html>

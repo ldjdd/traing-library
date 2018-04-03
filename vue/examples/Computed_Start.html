@@ -24,8 +24,14 @@
       self: 100
     },
     computed: {
-      family: function () {
-        return this.wife + this.self;
+      family: {
+        get: function () {
+          return this.wife + this.self;
+        },
+        set: function (value) {
+          this.wife = value[0];
+          this.self = value[1];
+        }
       }
     }
   })
