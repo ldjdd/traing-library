@@ -21,11 +21,9 @@
   var app = new Vue({
     el: '#app',
     computed: {
-      millseconds: {
-        get: function () {
-          //1970 年 1 月 1日午夜与当前日期和时间之间的毫秒数
-          return Date.now();
-        }
+      millseconds: function () {
+        //1970 年 1 月 1日午夜与当前日期和时间之间的毫秒数
+        return Date.now();
       }
     }
   })

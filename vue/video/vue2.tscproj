@@ -151,10 +151,38 @@
           "metaData" : ""
         }
       ]
+    },
+    {
+      "id" : 6,
+      "src" : "D:\\用户目录\\我的文档\\Camtasia Studio\\Rec 04-10-18 1.trec",
+      "rect" : [0, 0, 1364, 768],
+      "lastMod" : "20180410T150856",
+      "sourceTracks" : [
+        {
+          "range" : [0, 50472],
+          "type" : 0,
+          "editRate" : 30,
+          "trackRect" : [0, 0, 1364, 768],
+          "sampleRate" : 27,
+          "bitDepth" : 0,
+          "numChannels" : 0,
+          "metaData" : "Rec 04-10-18 1.trec;"
+        },
+        {
+          "range" : [0, 74177536],
+          "type" : 2,
+          "editRate" : 44100,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 44100,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "metaData" : ""
+        }
+      ]
     }
   ],
   "timeline" : {
-    "id" : 6,
+    "id" : 7,
     "sceneTrack" : {
       "scenes" : [
         {
@@ -167,11 +195,11 @@
                 "trackIndex" : 0,
                 "medias" : [
                   {
-                    "id" : 7,
+                    "id" : 8,
                     "_type" : "UnifiedMedia",
                     "video" : 
                         {
-                          "id" : 8,
+                          "id" : 9,
                           "_type" : "ScreenVMFile",
                           "src" : 1,
                           "trackNumber" : 0,
@@ -249,7 +277,7 @@
                         },
                     "audio" : 
                         {
-                          "id" : 9,
+                          "id" : 10,
                           "_type" : "AMFile",
                           "src" : 1,
                           "trackNumber" : 1,

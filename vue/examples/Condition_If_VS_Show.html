@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Vue!</title>
+</head>
+<body>
+
+<div id="app">
+  <img v-if="showGirl" style="width:49%;" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1523377852994&di=ef88aa6c9835a89a09ae6621451f9663&imgtype=0&src=http%3A%2F%2Fp.3761.com%2Fpic%2F50491421458201.jpg" />
+  <img v-show="showGirl" style="width:49%;" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1523377545008&di=b2f96cec7604024e2c80e6c10844d3cb&imgtype=0&src=http%3A%2F%2Fpic.yesky.com%2FuploadImages%2F2015%2F141%2F12%2FR6F2P2F4U397.jpg" />
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+
+<script>
+	var vm = new Vue({
+		el: '#app',
+    data: {
+      showGirl: false
+    }
+	})
+</script>
+
+</body>
+</html>

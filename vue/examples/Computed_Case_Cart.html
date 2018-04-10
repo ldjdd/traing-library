@@ -4,11 +4,25 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Vue!</title>
+  <style type="text/css">
+    .cell {
+      float: left;
+    }
+    .cart-body .cart-item {
+      clear: both;
+    }
+    .cart-body .p-name {
+      width: 200px;
+    }
+    .cart-body .p-price {
+      width: 100px;
+    }
+  </style>
 </head>
 <body>
 
   <div id="app">
-     <h1>订单总金额：{{ total }}</h1>
+    <h1>总金额：{{ total }}</h1>
   </div>
 
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
@@ -18,7 +32,7 @@
   var vm = new Vue({
     el: '#app',
     data: {
-      goods: [
+      products: [
         { name: '美国娃娃', num: 2, price: 1000 },
         { name: '<<重口味川菜>>', num: 1, price: 50 }
       ]
@@ -26,8 +40,8 @@
     computed: {
       total: function () {
         let totalAmount = 0.0;
-        for(let i=0; i<this.goods.length; i++) {
-          totalAmount += this.goods[i]['num'] * this.goods[i]['price'];
+        for(let i=0; i<this.products.length; i++) {
+          totalAmount += this.products[i]['num'] * this.products[i]['price'];
         }
         return totalAmount;
       }

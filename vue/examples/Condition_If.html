@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Vue!</title>
+</head>
+<body>
+
+<div id="app">
+  <img v-if="mode === 1" style="width:500px;" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1523379676630&di=0163c3790c902d4e3d805db47e9ccdd7&imgtype=0&src=http%3A%2F%2Fimg0.ph.126.net%2FC5A5B6-cidvjApJAXcWUTw%3D%3D%2F4941574691232689355.jpg" />
+  <img v-else-if="mode === 2" style="width:500px;" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1523379239531&di=9aed00c349c15f4820604269ed06398a&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimage%2Fc0%253Dpixel_huitu%252C0%252C0%252C294%252C40%2Fsign%3Decfe83b9042442a7ba03f5e5b83bc827%2F728da9773912b31bc2fe74138d18367adab4e17e.jpg" />
+  <img v-else style="width:500px;" style="width:500px;" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1523379370916&di=82b3076ecd2adb893713ab98cef4876e&imgtype=0&src=http%3A%2F%2Fpic32.photophoto.cn%2F20140920%2F0036036890637086_b.jpg" />
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+
+<script>
+	var vm = new Vue({
+		el: '#app',
+    data: {
+      mode: 1
+    }
+	})
+</script>
+
+</body>
+</html>
