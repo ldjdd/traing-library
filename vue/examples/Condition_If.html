@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Vue!</title>
+</head>
+<body>
+
+<div id="app">
+  <img v-if="mode === 1" title="if" style="width:100%;" src="./imgs/girl-1.jpg" />
+  <img v-else-if="mode === 2" title="else-if" style="width:100%;" src="./imgs/girl-2.jpg" />
+  <img v-else title="else" style="width:100%;" src="./imgs/girl-3.jpg" />
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+
+<script>
+  console.clear();
+	var vm = new Vue({
+		el: '#app',
+    data: {
+      mode: 1
+    }
+	})
+</script>
+
+</body>
+</html>

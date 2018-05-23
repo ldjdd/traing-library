@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Vue!</title>
+</head>
+<body>
+
+<div id="app">
+  <template v-if="showGirl">
+    <img style="width:49%;" src="./imgs/girl-1.jpg" />
+    <img style="width:49%;" src="./imgs/girl-2.jpg" />
+  </template>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+
+<script>
+	var vm = new Vue({
+		el: '#app',
+    data: {
+      showGirl: true
+    }
+	})
+</script>
+
+</body>
+</html>

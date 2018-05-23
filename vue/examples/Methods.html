@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Vue!</title>
+</head>
+<body>
+
+<div id="app">
+  {{ methodA() }}
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+
+<script>
+  console.clear();
+
+	var app = new Vue({
+		el: '#app',
+    methods: {
+      methodA: function () {
+        this.methodB(3)
+      },
+      methodB: function (a) {
+
+      }
+    }
+	})
+</script>
+
+</body>
+</html>

@@ -3,32 +3,26 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Data</title>
+  <title>Data!</title>
 </head>
 <body>
 
-<div id="app">
-	<h1>{{ message }}</h1>
-	<a v-bind:href="link">Vuejs官网</a>
-</div>
+  <div id="app">
+     <h1>{{ name }}: {{ money }}</h1>
+  </div>
 
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
 
 <script>
-	console.clear();
 
-	var vm = new Vue({
-		el: '#app',
-		data: {
-			message: 'Hello Vue!',
-			link: 'http://vuejs.org'
-		},
-		created: function () {
-			console.log('created: ' + this.message);
-		}
-	})
+  var vm = new Vue({
+    el: '#app',
+    data: {
+		name: '屌丝',
+      	money: 1000
+    }
+  })
 
-	console.log('vm: ' + vm.message);
 </script>
 
 </body>
