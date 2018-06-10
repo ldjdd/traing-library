@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Vue!</title>
+</head>
+<body>
+
+  <ul id="app">
+    <li v-for="item in items">
+      {{ item.message }}
+    </li>
+  </ul>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+
+<script>
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    items: [
+      { message: 'Foo' },
+      { message: 'Bar' }
+    ]
+  },
+  methods: {
+	filter: function(){
+		this.items.filter(function (item) {
+		  return item.message.match(/Foo/)
+		})
+	},
+	filterReplacing: function(){
+		this.items = this.items.filter(function (item) {
+		  return item.message.match(/Foo/)
+		})
+	}
+  }
+})
+
+</script>
+
+</body>
+</html>
