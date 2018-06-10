@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Vue!</title>
+  <style>
+	span{
+		background: #ff0000;
+	}
+  </style>
+</head>
+<body>
+
+<div>
+	<h3>行级元素自左往右</h3>
+	<span style="background:#aa0000;">Inline elements locate from left to right</span>
+	<span style="background:#ff0000;">2Inline elements locate from left to right</span>
+	<span style="background:#660000;">Inline elements locate from left to right</span>
+	<div style="margin:20px 0px;">
+		<!-- 如果想让span之间没有空隙，必须紧密连接，不能有空格或换行 -->
+		<span style="background: #aa0000;">No space between the spans</span><span style="background: #ff0000;">No space between the spans</span>
+	</div>
+	<h3>块级元素自上而下</h3>
+	<div style="background:#006600;">Up to down</div>
+	<div style="background:#00aa00;">Up to down</div>
+	<div style="background:#00ff00;">Up to down</div>
+	<h3>块级元素自上而下,可以设定宽高</h3>
+	<div style="width:100px;height:100px;background:#006600;">Up to down</div>
+	<div style="width:150px;height:100px;background:#00aa00;">Up to down</div>
+	<div style="width:200px;height:100px;background:#00ff00;">Up to down</div>
+	<h3>脱离文档流 - float</h3>
+	<p>设置float之后,块级元素宽度就会脱离文档流，宽度不再默认等于父层宽度,会影响后面块级元素的排版</p>
+	<div style="background:#aa0000;float:left;">Float Left</div>
+	<div style="background:#00aa00;float:left;">Float Left</div>
+	<div style="background:#000022;float:left;color:#fff;">Float Left</div>
+	<div style="width:200px;height:100px;background:#00ff00;">前面3个都设定了float属性，此块会从父层的左上角开始计算尺寸</div>
+	<h3>脱离文档流 - 行元素float</h3>
+	<div>
+		<span style="background:#ffff00;float:left;">Inline elements locate from left to right</span>
+		<span style="background:#aaaa00;float:left;">Inline elements locate from left to right</span>
+	</div>
+	<h3 style="clear:both;">脱离文档流 - float 浮动的元素不会影响影响父元素的高度和宽度</h3>
+	<div style="position:relative;border:1px solid #000;">
+		<div style="background:#aa0000;float:left;">Float Left</div>
+		<div style="background:#00aa00;float:left;">Float Left</div>
+		<div style="background:#000022;float:left;color:#fff;">Float Left</div>
+	</div>
+	<h3 style="clear:both;">脱离文档流 - float 浮动的元素不会影响影响父元素的高度和宽度</h3>
+	<div style="position:relative;border:1px solid #000;">
+		<div style="background:#aa0000;float:left;">Float Left</div>
+		<div style="background:#00aa00;float:left;">Float Left</div>
+		<div style="background:#ddd; height:100px;color:#fff;">No Float</div>
+	</div>
+</div>
+</body>
+</html>

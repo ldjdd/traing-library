@@ -207,14 +207,70 @@
           "metaData" : ""
         }
       ]
+    },
+    {
+      "id" : 8,
+      "src" : "D:\\用户目录\\我的文档\\Camtasia Studio\\Rec 04-12-18.trec",
+      "rect" : [0, 0, 1364, 728],
+      "lastMod" : "20180412T142346",
+      "sourceTracks" : [
+        {
+          "range" : [0, 7788],
+          "type" : 0,
+          "editRate" : 30,
+          "trackRect" : [0, 0, 1364, 728],
+          "sampleRate" : 27,
+          "bitDepth" : 0,
+          "numChannels" : 0,
+          "metaData" : "Rec 04-12-18.trec;"
+        },
+        {
+          "range" : [0, 11445248],
+          "type" : 2,
+          "editRate" : 44100,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 44100,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "metaData" : ""
+        }
+      ]
+    },
+    {
+      "id" : 9,
+      "src" : "D:\\用户目录\\我的文档\\Camtasia Studio\\Rec 04-12-18 1.trec",
+      "rect" : [0, 0, 1364, 728],
+      "lastMod" : "20180412T144343",
+      "sourceTracks" : [
+        {
+          "range" : [0, 13454],
+          "type" : 0,
+          "editRate" : 30,
+          "trackRect" : [0, 0, 1364, 728],
+          "sampleRate" : 27,
+          "bitDepth" : 0,
+          "numChannels" : 0,
+          "metaData" : "Rec 04-12-18 1.trec;"
+        },
+        {
+          "range" : [0, 19758080],
+          "type" : 2,
+          "editRate" : 44100,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 44100,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "metaData" : ""
+        }
+      ]
     }
   ],
   "timeline" : {
-    "id" : 8,
+    "id" : 10,
     "sceneTrack" : {
       "scenes" : [
         {
-          "duration" : 560.5,
+          "duration" : 448.0,
           "title" : "",
           "type" : "",
           "csml" : {
@@ -223,16 +279,16 @@
                 "trackIndex" : 0,
                 "medias" : [
                   {
-                    "id" : 9,
+                    "id" : 11,
                     "_type" : "UnifiedMedia",
                     "video" : 
                         {
-                          "id" : 10,
+                          "id" : 12,
                           "_type" : "ScreenVMFile",
-                          "src" : 7,
+                          "src" : 9,
                           "trackNumber" : 0,
                           "attributes" : {
-                            "ident" : "Rec 04-11-18"
+                            "ident" : "Rec 04-12-18 1"
                           },
                           "parameters" : {
                             "sourceCrop0" : {
@@ -295,9 +351,9 @@
 
                           ],
                           "start" : 0,
-                          "duration" : 16815,
+                          "duration" : 13440,
                           "mediaStart" : 0,
-                          "mediaDuration" : 16815,
+                          "mediaDuration" : 13440,
                           "scalar" : 1,
                           "animationTracks" : {
 
@@ -305,9 +361,9 @@
                         },
                     "audio" : 
                         {
-                          "id" : 11,
+                          "id" : 13,
                           "_type" : "AMFile",
-                          "src" : 7,
+                          "src" : 9,
                           "trackNumber" : 1,
                           "attributes" : {
                             "ident" : "",
@@ -321,9 +377,9 @@
 
                           ],
                           "start" : 0,
-                          "duration" : 16815,
+                          "duration" : 13440,
                           "mediaStart" : 0,
-                          "mediaDuration" : 16815,
+                          "mediaDuration" : 13440,
                           "scalar" : 1,
                           "animationTracks" : {
 
@@ -331,9 +387,9 @@
                         }
 ,
                     "start" : 0,
-                    "duration" : 16815,
+                    "duration" : 13440,
                     "mediaStart" : 0,
-                    "mediaDuration" : 16815,
+                    "mediaDuration" : 13440,
                     "scalar" : 1,
                     "metadata" : {
                       "AutoAppliedSmartFocus" : "False",
