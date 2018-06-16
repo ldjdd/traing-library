@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Vue!</title>
+  <style>
+
+  </style>
+</head>
+<body style="padding:0px;margin:0px;">
+  <!--
+  <div style="position:relative;top:100px;width:500px;height:500px;background:#00a">
+      <div style="position:relative;top:100px;left:100px;width:300px;height:200px;background:#999;font-size:26px;">
+        参考点为上层最近设置position的块
+      </div>
+  </div>
+-->
+  <div style="top:100px;width:800px;height:800px;background:#00a;margin:100px;">
+    <div style="width:500px;height:500px;background:#0aa;">
+      <div style="width:200px;height:200px;background:#333;"></div>
+      <div style="position:relative;bottom:0px;left:0px;width:300px;height:200px;background:#999;font-size:26px;">
+        参考点为上层最近设置position的块
+      </div>
+      <div style="position:relative;top:0px;left:0px;width:300px;height:200px;background:#af0;font-size:26px;">
+          参考点为上层最近设置position的块
+      </div>
+    </div>      
+  </div>
+</body>
+</html>

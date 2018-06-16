@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Flex!</title>
+  <style>
+	.flex-container{
+		display:flex;
+		height:100px;
+		width: 500px;
+		border:dashed 1px #aaa;
+	}
+	.item-row{
+		width: 100px;
+	}
+	.item-column{
+		height: 100px;
+	}
+	.item:nth-child(1){
+		background: #FF88C2;
+	}
+	.item:nth-child(2){
+		background: #FF8888;
+	}
+	.item:nth-child(3){
+		background: #FFA488;
+	}
+  </style>
+</head>
+<body>
+	<div>
+		<h2>默认展示（只在容器层设置display:flex）</h2>
+		<div class="flex-container example-1">
+			<div class="item item-row"></div>
+			<div class="item item-row"></div>
+			<div class="item item-row"></div>
+		</div>
+	</div>
+
+	<div>	
+		<h2>flex-direction：设置容器里的item布局起点及方向，在容器中设置</h2>
+		<div>
+			<p class="css-value">
+				<span>1、flex-direction: row;</span>
+				<span>从左往右摆放在一行，item高度等于容器高度</span>
+			</p>
+			<div class="flex-container" style="flex-direction: row">
+				<div class="item item-row"></div>
+				<div class="item item-row"></div>
+				<div class="item item-row"></div>
+			</div>
+		</div>
+		<div>
+			<p class="css-value">
+				<span>2、flex-direction: row-reverse;</span>
+				<span>从右往左摆放在一行，item高度等于容器高度</span>
+			</p>
+			<div class="flex-container" style="flex-direction: row-reverse">
+				<div class="item item-row"></div>
+				<div class="item item-row"></div>
+				<div class="item item-row"></div>
+			</div>
+		</div>
+		<div>
+			<p class="css-value">
+				<span>3、flex-direction: column;</span>
+				<span>从上往下摆放在一列，item宽度等于容器宽度</span>
+			</p>
+			<div class="flex-container" style="flex-direction:column;height:auto;">
+				<div class="item item-column"></div>
+				<div class="item item-column"></div>
+				<div class="item item-column"></div>
+			</div>
+		</div>
+		<div>
+			<p class="css-value">
+				<span>4、flex-direction: column-reverse;</span>
+				<span>从下往上摆放在一列，item宽度等于容器宽度</span>
+			</p>
+			<div class="flex-container" style="flex-direction:column-reverse;height:auto;">
+				<div class="item item-column"></div>
+				<div class="item item-column"></div>
+				<div class="item item-column"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<div>	
+	<h2>justify-content：设置容器里的item分布方式，在容器中设置</h2>
+	<div>
+		<p class="css-value">
+			<span>1-1、justify-content: flex-start;</span>
+			<span>item以开始点紧密分布</span>
+		</p>
+		<div class="flex-container" style="justify-content:flex-start">
+			<div class="item item-row"></div>
+			<div class="item item-row"></div>
+			<div class="item item-row"></div>
+		</div>
+	</div>
+	<div>
+		<p class="css-value">
+			<span>1-2、justify-content: flex-start;</span>
+			<span>item以开始点紧密分布</span>
+		</p>
+		<div class="flex-container" style="flex-direction:column;justify-content:flex-start;height: 500px;">
+			<div class="item item-column"></div>
+			<div class="item item-column"></div>
+			<div class="item item-column"></div>
+		</div>
+	</div>
+	<div>
+		<p class="css-value">
+			<span>2-1、justify-content: center;</span>
+			<span>item居中紧密分布</span>
+		</p>
+		<div class="flex-container" style="justify-content: center">
+			<div class="item item-row"></div>
+			<div class="item item-row"></div>
+			<div class="item item-row"></div>
+		</div>
+	</div>
+	<div>
+		<p class="css-value">
+			<span>2-2、justify-content: center;</span>
+			<span>item以居中紧密分布</span>
+		</p>
+		<div class="flex-container" style="flex-direction:column;justify-content:center;height: 500px;">
+			<div class="item item-column"></div>
+			<div class="item item-column"></div>
+			<div class="item item-column"></div>
+		</div>
+	</div>
+	<div>
+		<p class="css-value">
+			<span>3-1、justify-content: flex-end;</span>
+			<span>item从右往左紧密分布</span>
+		</p>
+		<div class="flex-container" style="justify-content: flex-end">
+			<div class="item item-row"></div>
+			<div class="item item-row"></div>
+			<div class="item item-row"></div>
+		</div>
+	</div>
+	<div>
+		<p class="css-value">
+			<span>3-2、justify-content: flex-end;</span>
+			<span>item从下往上紧密分布</span>
+		</p>
+		<div class="flex-container" style="flex-direction:column;justify-content:flex-end;height: 500px;">
+			<div class="item item-column"></div>
+			<div class="item item-column"></div>
+			<div class="item item-column"></div>
+		</div>
+	</div>
+	<div>
+		<p class="css-value">
+			<span>4-1、justify-content: space-around;</span>
+			<span>item分散分布，item之间的距离是两边距离的2倍</span>
+		</p>
+		<div class="flex-container" style="justify-content: space-around">
+			<div class="item item-row"></div>
+			<div class="item item-row"></div>
+			<div class="item item-row"></div>
+		</div>
+	</div>
+	<div>
+		<p class="css-value">
+			<span>4-2、justify-content: space-around;</span>
+			<span>item分散分布，item之间的距离是两边距离的2倍</span>
+		</p>
+		<div class="flex-container" style="flex-direction:column;justify-content:space-around;height: 500px;">
+			<div class="item item-column"></div>
+			<div class="item item-column"></div>
+			<div class="item item-column"></div>
+		</div>
+	</div>
+	<div>
+		<p class="css-value">
+			<span>5-1、justify-content: space-between;</span>
+			<span>item分散分布，item之间距离相等，两边紧靠容器不留空间</span>
+		</p>
+		<div class="flex-container" style="justify-content: space-between">
+			<div class="item item-row"></div>
+			<div class="item item-row"></div>
+			<div class="item item-row"></div>
+		</div>
+	</div>
+	<div>
+		<p class="css-value">
+			<span>5-2、justify-content: space-between;</span>
+			<span>item分散分布，item之间距离相等，两边紧靠容器不留空间</span>
+		</p>
+		<div class="flex-container" style="flex-direction:column;justify-content:space-between;height: 500px;">
+			<div class="item item-column"></div>
+			<div class="item item-column"></div>
+			<div class="item item-column"></div>
+		</div>
+	</div>
+</div>
+<div>
+	<h2>align-items：设置容器里的item垂直对齐方式，在容器中设置</h2>
+	<div>
+		<p class="css-value">
+			<span>1-1、align-items: flex-start;</span>
+			<span>item垂直靠上对齐</span>
+		</p>
+		<div class="flex-container" style="align-items:flex-start">
+			<div class="item" style="width: 100px; height: 100px;"></div>
+			<div class="item" style="width: 100px; height: 150px;"></div>
+			<div class="item" style="width: 100px; height: 200px;"></div>
+		</div>
+	</div>
+	<div>
+		<p class="css-value">
+			<span>1-2、align-items: flex-start;</span>
+			<span>item垂直靠上对齐</span>
+		</p>
+		<div class="flex-container" style="flex-direction:column; align-items:flex-start">
+			<div class="item" style="width: 100px; height: 100px;"></div>
+			<div class="item" style="width: 150px; height: 100px;"></div>
+			<div class="item" style="width: 200px; height: 100px;"></div>
+		</div>
+	</div>
+	<div style="margin-top: 200px;">
+		<p class="css-value">
+			<span>2-1、align-items: flex-end;</span>
+			<span>item垂直靠下对齐</span>
+		</p>
+		<div class="flex-container" style="align-items:flex-end;margin-top: 200px;">
+			<div class="item" style="width: 100px; height: 100px;"></div>
+			<div class="item" style="width: 100px; height: 150px;"></div>
+			<div class="item" style="width: 100px; height: 200px;"></div>
+		</div>
+	</div>
+	<div>
+		<p class="css-value">
+			<span>2-2、align-items: flex-end;</span>
+			<span>item垂直靠右对齐</span>
+		</p>
+		<div class="flex-container" style="flex-direction:column; align-items:flex-end">
+			<div class="item" style="width: 100px; height: 100px;"></div>
+			<div class="item" style="width: 150px; height: 100px;"></div>
+			<div class="item" style="width: 200px; height: 100px;"></div>
+		</div>
+	</div>
+	<div style="margin-top: 200px;">
+		<p class="css-value">
+			<span>3-1、align-items: center;</span>
+			<span>item垂直剧中对齐</span>
+		</p>
+		<div class="flex-container" style="align-items:center;margin-top: 200px;">
+			<div class="item" style="width: 100px; height: 100px;"></div>
+			<div class="item" style="width: 100px; height: 150px;"></div>
+			<div class="item" style="width: 100px; height: 200px;"></div>
+		</div>
+	</div>
+	<div style="margin-top: 200px;">
+		<p class="css-value">
+			<span>3-2、align-items: center;</span>
+			<span>item垂直居中对齐</span>
+		</p>
+		<div class="flex-container" style="height:500px;align-content:flex-start;flex-direction:column;justify-content:flex-start;align-items:center">
+			<div class="item" style="width: 100px; height: 100px;"></div>
+			<div class="item" style="width: 150px; height: 100px;"></div>
+			<div class="item" style="width: 200px; height: 100px;"></div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

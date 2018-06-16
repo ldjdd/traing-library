@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Vue!</title>
+  <!-- 引入Element样式 -->
+<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+</head>
+<body>
+  <div id="app">
+    <input  
+    @keydown.up="up('down')"
+    @keydown.down="down('down')"
+    @keydown.left="left('down')"
+    @keydown.right="right('down')"
+    @keyup.up="up('up')"
+    @keyup.down="down('up')"
+    @keyup.left="left('up')"
+    @keyup.right="right('up')" />
+    <div class="key-wrapper">
+        <div class="key" v-bind:class="{ active: upActive}">up</div>
+        <div class="key" v-bind:class="{ active: leftActive}">left</div>
+        <div class="key" v-bind:class="{ active: downActive}">down</div>
+        <div class="key" v-bind:class="{ active: rightActive}">right</div>
+      </div>
+    </div>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+<!-- 引入Element组件库 -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+
+new Vue({
+  el: '#app',
+  data: {
+    upActive: false,
+    leftActive: false,
+    downActive: false,
+    rightActive: false
+  },
+  methods: {
+    up: function(status) {
+      if(status === 'down')
+        this.upActive = true;
+      else 
+        this.upActive = false;
+    },
+    left: function(status) {
+      if(status === 'down')
+        this.leftActive = true;
+      else 
+        this.leftActive = false;
+    },
+    down: function(status) {
+      if(status === 'down')
+        this.downActive = true;
+      else 
+        this.downActive = false;
+    },
+    right: function(status) {
+      if(status === 'down')
+        this.rightActive = true;
+      else 
+        this.rightActive = false;
+    }
+  }
+})
+</script>
+<style>
+  .key-wrapper{
+    position: relative;
+    margin-top: 52px;
+  }
+  .key{
+    width: 50px;
+    height: 50px;
+    background: #ddd;
+    text-align: center;
+    float: left;
+    line-height: 50px;
+  }
+  .key:nth-child(n+1){
+    margin-right: 2px;
+  }
+  .key:nth-child(1){
+    position: absolute;
+    top: -52px;
+    left: 52px;
+  }
+  .active{
+    background: rgb(170, 0, 9);
+    color: #fff;
+  }
+</style>
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Vue!</title>
+  <!-- 引入Element样式 -->
+<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+</head>
+<body>
+  <div id="app">
+    <el-row class="scoreboard">
+      <span class="label">Error: </span><span class="error">{{ error }}</span>
+      <span class="label">Correct: </span><span class="correct">{{ correct }}</span>
+    </el-row>
+    <el-row>
+      <div>
+        <span v-for="c in text" v-bind:class="{ error: c.s==2, 'success': c.s==1 }">{{ c.c }}</span>
+      </div>
+    </el-row>
+    <el-row v-for="(krow, i) in keys" :key="i" :gutter="20" type="flex" justify="center">
+      <el-col v-for="(k, j) in krow" :key="j" :span="k.span">
+        <div class="grid-content bg-purple" v-bind:class="{ status1: k.s == 1, status2: k.s == 2 }" @click="onClickKey(k.keyCode, k.code)">
+          {{ k.k }}
+        </div>
+      </el-col>
+    </el-row>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+<!-- 引入Element组件库 -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    text: [],
+    cursor: 0,
+    inputText: '',
+    error: 0, 
+    correct: 0,
+    keys: [
+      [
+        {k:'`~', s: false, keyCode: 192},
+        {k:'1', s: false, keyCode: 49},
+        {k:'2', s: false, keyCode: 50},
+        {k:'3', s: false, keyCode: 51},
+        {k:'4', s: false, keyCode: 52},
+        {k:'5', s: false, keyCode: 53},
+        {k:'6', s: false, keyCode: 54},
+        {k:'7', s: false, keyCode: 55},
+        {k:'8', s: false, keyCode: 56},
+        {k:'9', s: false, keyCode: 57},
+        {k:'0', s: false, keyCode: 48},
+        {k:'-_', s: false, keyCode: 189},
+        {k:'=+', s: false, keyCode: 187},
+        {k:'BackSpace', s: false, keyCode: 8}
+      ],
+      [
+        {k:'Tab', s: false, keyCode: 9},
+        {k:'Q', s: false, keyCode: 81},
+        {k:'W', s: false, keyCode: 87},
+        {k:'E', s: false, keyCode: 69},
+        {k:'R', s: false, keyCode: 82},
+        {k:'T', s: false, keyCode: 84},
+        {k:'Y', s: false, keyCode: 89},
+        {k:'U', s: false, keyCode: 85},
+        {k:'I', s: false, keyCode: 73},
+        {k:'O', s: false, keyCode: 79},
+        {k:'P', s: false, keyCode: 80},
+        {k:'[{', s: false, keyCode: 219},
+        {k:']}', s: false, keyCode: 221},
+        {k:'Enter', s: false, keyCode: 13}
+      ],
+      [
+        {k:'CapeLock', s: false, keyCode: 20, code: 'ShiftLeft'},
+        {k:'A', s: false, keyCode: 65},
+        {k:'S', s: false, keyCode: 83},
+        {k:'D', s: false, keyCode: 68},
+        {k:'F', s: false, keyCode: 70},
+        {k:'G', s: false, keyCode: 71},
+        {k:'H', s: false, keyCode: 72},
+        {k:'J', s: false, keyCode: 74},
+        {k:'K', s: false, keyCode: 75},
+        {k:'L', s: false, keyCode: 76},
+        {k:';:', s: false, keyCode: 186},
+        {k:'\'"', s: false, keyCode: 222},
+        {k:'/|', s: false, keyCode: 220}
+      ],
+      [
+        {k:'Shift', s: false, keyCode: 16, 'code': 'ShiftLeft'},
+        {k:'Z', s: false, keyCode: 90},
+        {k:'X', s: false, keyCode: 88},
+        {k:'C', s: false, keyCode: 67},
+        {k:'V', s: false, keyCode: 86},
+        {k:'B', s: false, keyCode: 66},
+        {k:'N', s: false, keyCode: 78},
+        {k:'M', s: false, keyCode: 77},
+        {k:',<', s: false, keyCode: 188},
+        {k:'.>', s: false, keyCode: 190},
+        {k:'/?', s: false, keyCode: 191},
+        {k:'Shift', s: false, keyCode: 16, 'code': 'ShiftRight'}
+      ],
+      [
+        {k:'Control', s: false, keyCode: 17, span: 3},
+        {k:'Alt', s: false, keyCode: 18, span: 3},
+        {k:'Spacebar', s: false, keyCode: 32, span: 12},
+        {k:'Alt', s: false, keyCode: 18, span: 3},
+        {k:'Control', s: false, keyCode: 17, span: 3}]
+      ]
+  },
+  created: function() {
+    document.onkeydown = this.onKeyDown;
+    document.onkeyup = this.onKeyUp;
+    this.makeText();
+  },
+  methods: {
+    makeText: function() {
+      this.text = [
+        {c:'H', s: 0},
+        {c:'E', s: 0},
+        {c:'L', s: 0},
+        {c:'L', s: 0},
+        {c:'O', s: 0}
+      ];
+    },
+    autoOffKey: function(i, j) {
+      let ctx = this;
+      setTimeout(function() {
+        ctx.keys[i][j]['s'] = false;
+      }, 200);
+    },
+    onKeyDown: function(e) {
+      let keyCode = window.event.keyCode; // 16
+      let key = window.event.key; // Shift
+      let code = window.event.code;  // 'ShiftLeft'
+      // Tab
+      if (keyCode === 9) {  
+        e.preventDefault();
+      }
+      this.lightKey(keyCode, code);
+    },
+    onKeyUp: function(e) {
+      let keyCode = window.event.keyCode; // 16
+      let key = window.event.key; // Shift
+      let code = window.event.code;  // 'ShiftLeft'
+
+      for(let i=0; i < this.keys.length; i++) {
+        for(let j=0; j < this.keys[i].length; j++) {
+          if(this.keys[i][j]['keyCode'] === keyCode) {
+            this.keys[i][j]['s'] = false;
+          }
+        }
+      }
+      if(this.cursor < this.text.length) {
+        if(keyCode != 20){
+          if(this.text[this.cursor]['c'] == key) {
+            this.score ++;
+            this.correct ++;
+            this.text[this.cursor]['s'] = 1;
+          } else {
+            this.error ++;
+            this.text[this.cursor]['s'] = 2;
+          }
+          
+          this.cursor ++;
+        }
+      }
+      console.log('key up: ' + keyCode);
+    },
+    onClickKey: function(keyCode, code) {
+      this.lightKey(keyCode, code, true);
+    },
+    lightKey: function(keyCode, code, off) {
+      for(let i=0; i < this.keys.length; i++) {
+        for(let j=0; j < this.keys[i].length; j++) {
+          if(this.keys[i][j]['keyCode'] === keyCode) {
+            this.keys[i][j]['s'] = true;
+            if(this.keys[i][j]['code'] === 'undefined' || this.keys[i][j]['code'] === code) {
+              if(off) {
+                this.autoOffKey(i, j);
+              }
+            }
+          } 
+        }
+      }
+    }
+  }
+})
+</script>
+<style>
+  .success {
+    color: #00ff00;
+  }
+  .error {
+    color: #ff0000;
+  }
+  .el-row {
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .el-col {
+    border-radius: 4px;
+  }
+  .bg-purple-dark {
+    background: #99a9bf;
+  }
+  .bg-purple {
+    background: #d3dce6;
+  }
+  .bg-purple-light {
+    background: #e5e9f2;
+  }
+  .grid-content {
+    border-radius: 4px;
+    min-height: 50px;
+    text-align: center;
+  }
+  .row-bg {
+    padding: 10px 0;
+    background-color: #f9fafc;
+  }
+  .status1 {
+    background: #333333;
+    color: #fff;
+  }
+  .status2 {
+    background: #00ff00;
+  }
+  .scoreboard .label {
+    color: #666;
+  }
+  .scoreboard .correct, .scoreboard .score {
+    color: #22aa22;
+  }
+  .scoreboard .error {
+    color: #aa0000;
+  }
+</style>
+</body>
+</html>

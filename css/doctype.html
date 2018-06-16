@@ -15,11 +15,11 @@
 <div>
 	<h3>行级元素自左往右</h3>
 	<span style="background:#aa0000;">Inline elements locate from left to right</span>
-	<span style="background:#ff0000;">2Inline elements locate from left to right</span>
-	<span style="background:#660000;">Inline elements locate from left to right</span>
+	<span style="background:#ff0000;">有换行的话，元素之间会有空隙</span>
+	<span style="background:#660000;width:200px;height:50px;">行级元素不可设定宽高</span>
 	<div style="margin:20px 0px;">
 		<!-- 如果想让span之间没有空隙，必须紧密连接，不能有空格或换行 -->
-		<span style="background: #aa0000;">No space between the spans</span><span style="background: #ff0000;">No space between the spans</span>
+		<span style="background: #aa0000;">No space between the spans</span><span style="background: #ff0000;">标签之间紧连的话，无空隙</span>
 	</div>
 	<h3>块级元素自上而下</h3>
 	<div style="background:#006600;">Up to down</div>
@@ -35,23 +35,66 @@
 	<div style="background:#00aa00;float:left;">Float Left</div>
 	<div style="background:#000022;float:left;color:#fff;">Float Left</div>
 	<div style="width:200px;height:100px;background:#00ff00;">前面3个都设定了float属性，此块会从父层的左上角开始计算尺寸</div>
-	<h3>脱离文档流 - 行元素float</h3>
+	
+	<h3>脱离文档流 - 浮动前</h3>
 	<div>
-		<span style="background:#ffff00;float:left;">Inline elements locate from left to right</span>
-		<span style="background:#aaaa00;float:left;">Inline elements locate from left to right</span>
+		<span style="background:#55aa00;">There has a space between spans as there has a new line.</span>
+		<span style="background:#aa5500;">换行两个元素布局时会有空格</span>
 	</div>
-	<h3 style="clear:both;">脱离文档流 - float 浮动的元素不会影响影响父元素的高度和宽度</h3>
-	<div style="position:relative;border:1px solid #000;">
-		<div style="background:#aa0000;float:left;">Float Left</div>
-		<div style="background:#00aa00;float:left;">Float Left</div>
-		<div style="background:#000022;float:left;color:#fff;">Float Left</div>
+	<h3>脱离文档流 - 浮动后</h3>
+	<div>
+		<span style="background:#55aa00;float:left;">There has no space between spans,though there has a new line.</span>
+		<span style="background:#aa5500;float:left;">即使换行两元素布局也不会有空格</span>
 	</div>
-	<h3 style="clear:both;">脱离文档流 - float 浮动的元素不会影响影响父元素的高度和宽度</h3>
-	<div style="position:relative;border:1px solid #000;">
-		<div style="background:#aa0000;float:left;">Float Left</div>
-		<div style="background:#00aa00;float:left;">Float Left</div>
-		<div style="background:#ddd; height:100px;color:#fff;">No Float</div>
+
+	<h3 style="clear:both;">脱离文档流(对宽度的影响) - 浮动前</h3>
+	<div>
+		<div style="background:#aa0000;height:100px;">width equals parent's width</div>
+		<div style="background:#00aa00;height:100px;">宽度等于父层的宽度</div>
+		<div style="background:#000022;height:100px;color:#fff;">width equals parent's width</div>
+	</div>
+	<h3 style="clear:both;">脱离文档流(对宽度的影响) - 浮动后</h3>
+	<div>
+		<div style="background:#aa0000;height:100px;float:left;">The floating block's width equals its content needs zoom</div>
+		<div style="background:#00aa00;height:100px;float:left;">宽度等于实际内容占用的宽度</div>
+		<div style="background:#000022;height:100px;float:left;color:#fff;">no smoking</div>
+	</div>
+
+	<h3 style="clear:both;">脱离文档流(对父层高度的影响) - 浮动前</h3>
+	<div style="border:4px solid #0000aa;">
+		<div style="background:#aa0000;height:100px;">width equals parent's width</div>
+		<div style="background:#00aa00;height:100px;">宽度等于父层的宽度</div>
+		<div style="background:#000022;height:100px;color:#fff;">width equals parent's width</div>
+	</div>
+
+	<h3 style="clear:both;">脱离文档流(对父层高度的影响) - 浮动后</h3>
+	<div style="border:4px solid #0000aa;">
+		<div style="background:#aa0000;height:100px;float:left;">不占用文档流空间</div>
+		<div style="background:#00aa00;height:100px;float:left;">不占用文档流空间</div>
+		<div style="background:#000022;height:100px;float:left;color:#fff;">不占用文档流空间</div>
+	</div>
+
+	<h3 style="clear:both;">脱离文档流(对后续元素的影响) - 浮动前</h3>
+	<div style="border:4px solid #0000aa;">
+		<div style="background:#aa0000;height:100px;">不占用文档流 	`空间</div>
+		<div style="background:#00aa00;height:100px;;">不占用文档流空间</div>
+		<div style="background:#000022;height:100px;color:#fff;">不占用文档流空间</div>
+	</div>
+
+	<h3 style="clear:both;">脱离文档流(对后续元素的影响) - 浮动后</h3>
+	<div style="border:4px solid #0000aa;">
+		<div style="background:#aa0000;height:100px;width:100px;">不占用文档流空间</div>
+		<div style="background:#00aa00;height:100px;width:100px;float:left;">不占用文档流空间</div>
+		<div style="background:#000022;height:80px;color:#0ff;">不占用文档流空间</div>
+	</div>
+	<div style="background:#000022;height:120px;color:#0ff;">不占用文档流空间</div>
+
+	<h3 style="clear:both;">脱离文档流(对后续元素的影响) - 浮动后</h3>
+	<div style="border:4px solid #0000aa;">
+		<div style="background:#aa0000;height:100px;width:100px;float:left;">float left</div>
+		<div style="background:#00aa00;height:200px;width:400px;">no float</div>
+		<div style="background:#aa0000;height:100px;width:100px;float:left; display">float left</div>
 	</div>
 </div>
 </body>
-</html>
+</html>王总，我们部门有一个前端，入职1年多了，目前怀孕4个月，保险已经交了11个月了，5月和6月还没交上，她特别担心这个生育险的报销问题，麻烦领导能够协调下，能不能先把她的给补交上。

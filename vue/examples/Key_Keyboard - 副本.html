@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Vue!</title>
+  <!-- 引入Element样式 -->
+<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+</head>
+<body>
+  <div id="app">
+    <el-row v-for="(krow, i) in keys" :key="i" :gutter="20" type="flex" justify="center">
+      <el-col v-for="(k, j) in krow" :key="j">
+        <div class="grid-content bg-purple" v-bind:class="{ status1: k.s == 1, status2: k.s == 2 }" @click.exact="onClick" @click.ctrl="onCtrlClick" @click.ctrl.exact="onCtrlExactClick">
+          {{ k.k }}
+        </div>
+      </el-col>
+    </el-row>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+<!-- 引入Element组件库 -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    keys: [
+      [
+        {k:'Q', s: false, code: 81},
+        {k:'W', s: false, code: 87},
+        {k:'E', s: false, code: 69},
+        {k:'R', s: false, code: 82},
+        {k:'T', s: false, code: 84},
+        {k:'Y', s: false, code: 89},
+        {k:'U', s: false, code: 85},
+        {k:'I', s: false, code: 73},
+        {k:'O', s: false, code: 79},
+        {k:'P', s: false, code: 80},
+        {k:'[{', s: false, code: 219},
+        {k:']}', s: false, code: 221},
+        {k:'\\|', s: false, code: 220}
+      ],
+      [
+        {k:'A', s: false, code: 81},
+        {k:'S', s: false, code: 87},
+        {k:'D', s: false, code: 69},
+        {k:'F', s: false, code: 82},
+        {k:'G', s: false, code: 84},
+        {k:'H', s: false, code: 89},
+        {k:'U', s: false, code: 85},
+        {k:'I', s: false, code: 73},
+        {k:'O', s: false, code: 79},
+        {k:'P', s: false, code: 80},
+        {k:'[{', s: false, code: 219}
+      ]
+    ]
+  },
+  created: function() {
+    document.onkeydown = this.onKeyDown;
+    document.onkeyup = this.onKeyUp;
+  },
+  methods: {
+    onKeyDown: function(e) {
+      var key = window.event.keyCode;
+      for(let i=0; i < this.keys.length; i++) {
+        for(let j=0; j < this.keys[i].length; j++) {
+          if(this.keys[i][j]['code'] === key) {
+            this.keys[i][j]['s'] = true;
+          }
+        }
+      }
+      console.log('key down: ' + key);
+    },
+    onKeyUp: function(e) {
+      var key = window.event.keyCode;
+      for(let i=0; i < this.keys.length; i++) {
+        for(let j=0; j < this.keys[i].length; j++) {
+          if(this.keys[i][j]['code'] === key) {
+            this.keys[i][j]['s'] = false;
+          }
+        }
+      }
+      console.log('key up: ' + key);
+    }
+  }
+})
+</script>
+<style>
+  .el-row {
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .el-col {
+    border-radius: 4px;
+  }
+  .bg-purple-dark {
+    background: #99a9bf;
+  }
+  .bg-purple {
+    background: #d3dce6;
+  }
+  .bg-purple-light {
+    background: #e5e9f2;
+  }
+  .grid-content {
+    border-radius: 4px;
+    min-height: 50px;
+    text-align: center;
+  }
+  .row-bg {
+    padding: 10px 0;
+    background-color: #f9fafc;
+  }
+  .status1 {
+    background: #ff0000;
+  }
+  .status2 {
+    background: #00ff00;
+  }
+</style>
+</body>
+</html>
