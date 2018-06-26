@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Flex!</title>
+  <style>
+	.flex-container{
+		display:flex;
+		border:dashed 1px #aaa;
+		width: 80%;
+		height: 40vh;
+	}
+	.flex-container > *{
+		flex: 1 1 100px;
+		background: #66a;
+		font-size: 3rem;
+		color: #fff;
+		text-align: center;
+	}
+	#example-1 .flex-container{
+	}
+	#example-1 .flex-container > *{
+		border-right: dashed 1px #fff;
+		height: 100px;
+	}
+	#example-1 .flex-container > *:last-child{
+		border: none;
+	}
+	#example-2 .flex-container{
+		flex-direction: column;
+	}
+	#example-2 .flex-container > *{
+		border-bottom: dashed 1px #fff;
+		width: 200px;
+	}
+	#example-2 .flex-container > *:last-child{
+		border: none;
+	}
+	
+  </style>
+</head>
+<body>
+<div>	
+	<div id="example-1">
+		<div>
+			<h2>Growing and shrinking along main axis</h2>
+		</div>
+		<div class="flex-container">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+		</div>
+	</div>
+	<div id="example-2">
+		<div>
+			<h2>Growing and shrinking along main axis</h2>
+		</div>
+		<div class="flex-container">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
