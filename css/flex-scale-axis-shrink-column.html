@@ -5,44 +5,44 @@
   <meta name="viewport" content="width=device-width">
   <title>Flex!</title>
   <style>
-	body > div {
+	body > div{
 		display: flex;
 	}
-	body > div > div {
-		flex: 1 1 auto;
-	}
-	.flex-container {
+	.flex-container{
 		display:flex;
 		border:dashed 1px #aaa;
-		height: 40vh;
+		width: 80%;
+		height: 80vh;
+		flex-direction: column
 	}
-	.flex-container > * {
+	.flex-container > *{
 		background: #66a;
 		font-size: 3rem;
 		color: #fff;
 		text-align: center;
-		border-right: dashed 1px #fff;
+		border-top: dashed 1px #fff;
+		width: 300px;
 		height: 100px;
-		width: 100px;
+		flex-shrink: 0;
 	}
-	.flex-container > *:last-child {
+	.flex-container > *:first-child{
 		border: none;
 	}
-	.flex-container > :nth-child(2) {
-		width: 150px;
+	.flex-container > :nth-child(2){
+		/* height: 150px; */
 	}
-	.flex-container > :nth-child(3) {
-		width: 200px;
+	.flex-container > :nth-child(3){
+		/* height: 200px; */
 	}
-	#example-1 .flex-container  > * {
-		flex: 1 1 auto;
+	#example-1 .flex-container  > *:nth-child(2){
+		flex-shrink: 1;
+		/* overflow-y: */
 	}
-	#example-2 {
-		margin-left: 50px;
+	#example-1 .flex-container  > *{
+		/* flex: 1 1 auto; */
 	}
-	#example-2 .flex-container  > * {
+	#example-2 .flex-container  > *{
 		flex: 0 0 auto;
-		background: #080;
 	}
   </style>
 </head>

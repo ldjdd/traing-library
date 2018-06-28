@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width">
   <title>Flex!</title>
   <style>
-	body > div {
+	/* body > div {
 		display: flex;
 	}
 	body > div > div {
 		flex: 1 1 auto;
-	}
+	}*/
 	.flex-container {
 		display:flex;
 		border:dashed 1px #aaa;
@@ -23,19 +23,37 @@
 		text-align: center;
 		border-right: dashed 1px #fff;
 		height: 100px;
-		width: 100px;
+		/* width: 100px; */
 	}
 	.flex-container > *:last-child {
 		border: none;
 	}
 	.flex-container > :nth-child(2) {
-		width: 150px;
+		/* width: 150px; */
 	}
 	.flex-container > :nth-child(3) {
-		width: 200px;
+		/* width: 200px; */
+	}
+	#example-1 .flex-container{
+		/* width: 500px; */
 	}
 	#example-1 .flex-container  > * {
-		flex: 1 1 auto;
+		/* flex: 1 1 auto; */
+		/* flex-basis: 0; */
+		flex-basis: 0;
+		/* flex-shrink: 0; */
+	}
+	#example-1 .flex-container  > *:first-child {
+		flex-grow: 1;
+		/* flex-basis: 200px; */
+		/* flex-basis: 200px; */
+		/* flex-basis: 0; */
+	}
+	#example-1 .flex-container  > *:nth-child(2) {
+		flex-grow: 2
+	}
+	#example-1 .flex-container  > *:last-child {
+		flex-grow: 4
 	}
 	#example-2 {
 		margin-left: 50px;
@@ -54,7 +72,7 @@
 		</div>
 		<div class="flex-container">
 			<div>1</div>
-			<div>2</div>
+			<div>2224444444444444555555555555222</div>
 			<div>3</div>
 		</div>
 	</div>

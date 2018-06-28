@@ -29,13 +29,19 @@
 		border: none;
 	}
 	.flex-container > :nth-child(2) {
-		width: 150px;
+		/* width: 150px; */
 	}
 	.flex-container > :nth-child(3) {
-		width: 200px;
+		/* width: 200px; */
 	}
 	#example-1 .flex-container  > * {
-		flex: 1 1 auto;
+		
+	}
+	#example-1 .flex-container  > *:nth-child(2) {
+		flex-grow: 1;
+	}
+	#example-1 .flex-container  > *:last-child {
+		/* flex-grow: 3; */
 	}
 	#example-2 {
 		margin-left: 50px;
